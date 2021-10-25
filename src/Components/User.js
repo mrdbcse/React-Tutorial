@@ -1,11 +1,14 @@
-import React, { Component } from "react";
+const User = () => {
+  let Name = "Debjyoti";
+  const methodCall = () => {
+    alert(Name);
+    console.log("Button Clicked!");
+  };
+  return (
+    <div>
+      <button onClick={methodCall}>Click Me!!</button>
+    </div>
+  );
+};
 
-export default class User extends Component {
-  render() {
-    return (
-      <div>
-        <h1>Hello from User Class Component</h1>
-      </div>
-    );
-  }
-}
+export default User;

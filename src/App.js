@@ -1,13 +1,13 @@
-import logo from "./logo.svg";
 import "./App.css";
-import User from "./Components/User";
+import CState from "./Components/CState";
+// import FState from "./Components/FState";
 
-function App() {
+const App = () => {
   return (
     <div className='App'>
-      <User />
+      {/* <FState /> */} <CState />{" "}
     </div>
   );
-}
+};
 
 export default App;
