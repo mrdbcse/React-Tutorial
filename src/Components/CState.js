@@ -16,6 +16,7 @@ export default class CState extends Component {
   render() {
     return (
       <div>
+        <h1>STATE IN CLASS COMPONENT</h1>
         <h1> {this.state.Name} </h1>
         <button style={{ margin: "20px" }} onClick={() => this.updateName()}>
           Change Name

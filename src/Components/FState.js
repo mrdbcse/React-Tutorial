@@ -10,6 +10,7 @@ const FState = () => {
   console.warn("________________________________");
   return (
     <div>
+      <h1>USESTATE IN FUNCTIONAL COMPONENT</h1>
       <h1>{Num}</h1>
       <button style={{ margin: "10px" }} onClick={updateNum}>
         +
