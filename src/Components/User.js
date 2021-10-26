@@ -1,12 +1,18 @@
+import { useState } from "react";
 const User = () => {
-  let Name = "Debjyoti";
-  const methodCall = () => {
-    alert(Name);
-    console.log("Button Clicked!");
+  const [data, setData] = useState(null);
+  const [print, setPrint] = useState(false);
+  const getInput = (event) => {
+    console.log(event.target.value);
+    setData(event.target.value);
+    setPrint(false);
   };
   return (
     <div>
-      <button onClick={methodCall}>Click Me!!</button>
+      <h1>Get Input box value!</h1>
+      {print ? <h4>{data}</h4> : null}
+      <input type='text' onChange={getInput} />
+      <button onClick={() => setPrint(true)}>Print Data</button>
     </div>
   );
 };
