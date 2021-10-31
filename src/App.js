@@ -1,6 +1,7 @@
 import "./App.css";
-import APIPostMethods from "./Components/APIPostMethods";
-import APIGetMethods from "./Components/APIGetMethods";
+// import APIPostMethods from "./Components/APIPostMethods";
+// import APIGetMethods from "./Components/APIGetMethods";
+import AllAPIMethods from "./Components/AllAPIMethods";
 // import FuncAsProps from "./Components/FuncAsProps";
 // import BasicFormValidation from "./Components/BasicFormValidation";
 // import ConditionalRendering from "./Components/ConditionalRendering";
@@ -17,7 +18,7 @@ const App = () => {
   //   console.log("Function from App.js");
   // };
   return (
-    <div className='App'>
+    <div>
       {/* <FState /> */}
       {/* <FProps name="Anil" email="anil@email.com" /> */}
       {/* <FProps name="Bimal" email="bimal@email.com" /> */}
@@ -27,8 +28,9 @@ const App = () => {
       {/* <ConditionalRendering /> */}
       {/* <BasicFormValidation /> */}
       {/* <FuncAsProps data={getData} /> */}
-      <APIPostMethods />
-      <APIGetMethods />
+      {/* <APIPostMethods /> */}
+      {/* <APIGetMethods /> */}
+      <AllAPIMethods />
     </div>
   );
 };
