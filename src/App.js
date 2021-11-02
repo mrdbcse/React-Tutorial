@@ -1,5 +1,7 @@
 import "./App.css";
+import ControlledComponent from "./Components/ControlledComponent";
 import FwdRef from "./Components/FwdRef";
+import UncontrolledComponents from "./Components/UncontrolledComponents";
 import UseRefExample from "./Components/UseRefExample";
 // import UseMemoExample from "./Components/UseMemoExample";
 // import Bootstrap from "./Components/Bootstrap";
@@ -44,7 +46,9 @@ const App = () => {
       {/* <Map /> */}
       {/* <UseMemoExample /> */}
       {/* <UseRefExample /> */}
-      <FwdRef />
+      {/* <FwdRef /> */}
+      {/* <ControlledComponent /> */}
+      <UncontrolledComponents />
     </div>
   );
 };
