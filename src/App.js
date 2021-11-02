@@ -1,7 +1,14 @@
 import "./App.css";
+import FwdRef from "./Components/FwdRef";
+import UseRefExample from "./Components/UseRefExample";
+// import UseMemoExample from "./Components/UseMemoExample";
+// import Bootstrap from "./Components/Bootstrap";
+// import Map from "./Components/Map";
+// import Styles from "./Components/Styles";
+// import Hooks from "./Components/Hooks";
 // import APIPostMethods from "./Components/APIPostMethods";
 // import APIGetMethods from "./Components/APIGetMethods";
-import AllAPIMethods from "./Components/AllAPIMethods";
+// import AllAPIMethods from "./Components/AllAPIMethods";
 // import FuncAsProps from "./Components/FuncAsProps";
 // import BasicFormValidation from "./Components/BasicFormValidation";
 // import ConditionalRendering from "./Components/ConditionalRendering";
@@ -18,7 +25,7 @@ const App = () => {
   //   console.log("Function from App.js");
   // };
   return (
-    <div>
+    <div className='App'>
       {/* <FState /> */}
       {/* <FProps name="Anil" email="anil@email.com" /> */}
       {/* <FProps name="Bimal" email="bimal@email.com" /> */}
@@ -30,7 +37,14 @@ const App = () => {
       {/* <FuncAsProps data={getData} /> */}
       {/* <APIPostMethods /> */}
       {/* <APIGetMethods /> */}
-      <AllAPIMethods />
+      {/* <AllAPIMethods /> */}
+      {/* <Hooks /> */}
+      {/* <Styles /> */}
+      {/* <Bootstrap /> */}
+      {/* <Map /> */}
+      {/* <UseMemoExample /> */}
+      {/* <UseRefExample /> */}
+      <FwdRef />
     </div>
   );
 };
@@ -38,7 +52,9 @@ const App = () => {
 export default App;
 
 // import React, { Component } from "react";
-// import LifeCycleMethods from "./Components/LifeCycleMethods";
+// // import LifeCycleMethods from "./Components/LifeCycleMethods";
+// // import PureComponentExample from "./Components/PureComponent";
+// import RefExample from "./Components/RefExample";
 
 // export default class App extends Component {
 //   // constructor() {
@@ -61,6 +77,8 @@ export default App;
 //         {/* <CProps name={this.state.name} role='SDT' /> */}
 //         {/* <button onClick={() => this.changeName()}>Change Name</button> */}
 //         {/* <LifeCycleMethods /> */}
+//         {/* <PureComponentExample /> */}
+//         <RefExample />
 //       </div>
 //     );
 //   }
