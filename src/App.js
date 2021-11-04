@@ -1,4 +1,5 @@
 import "./App.css";
+import { Link, Route, Routes } from "react-router-dom";
 import CounterTwo from "./Components/CounterTwo";
 import Hoc from "./Components/Hoc";
 // import ControlledComponent from "./Components/ControlledComponent";
@@ -9,10 +10,12 @@ import Hoc from "./Components/Hoc";
 // import Bootstrap from "./Components/Bootstrap";
 // import Map from "./Components/Map";
 // import Styles from "./Components/Styles";
-// import Hooks from "./Components/Hooks";
-// import APIPostMethods from "./Components/APIPostMethods";
-// import APIGetMethods from "./Components/APIGetMethods";
-// import AllAPIMethods from "./Components/AllAPIMethods";
+import Hooks from "./Components/Hooks";
+import APIPostMethods from "./Components/APIPostMethods";
+import APIGetMethods from "./Components/APIGetMethods";
+import AllAPIMethods from "./Components/AllAPIMethods";
+import { Home } from "./Components/Home";
+import PageNotFound from "./Components/PageNotFound";
 // import FuncAsProps from "./Components/FuncAsProps";
 // import BasicFormValidation from "./Components/BasicFormValidation";
 // import ConditionalRendering from "./Components/ConditionalRendering";
@@ -30,6 +33,20 @@ const App = () => {
   // };
   return (
     <div className='App'>
+      <Routes>
+        <Route exact={true} path='/' element={<Home />} />
+        <Route exact={true} path='/allapimethods' element={<AllAPIMethods />} />
+        <Route exact={true} path='/apigetmethods' element={<APIGetMethods />} />
+        <Route
+          exact={true}
+          path='/apipostmethods'
+          element={<APIPostMethods />}
+        />
+        <Route exact={true} path='/hoc' element={<Hoc cmp={CounterTwo} />} />
+        <Route exact={true} path='/hooks' element={<Hooks />} />
+        <Route exact={true} path='*' element={<PageNotFound />} />
+      </Routes>
+
       {/* <FState /> */}
       {/* <FProps name="Anil" email="anil@email.com" /> */}
       {/* <FProps name="Bimal" email="bimal@email.com" /> */}
@@ -41,7 +58,6 @@ const App = () => {
       {/* <FuncAsProps data={getData} /> */}
       {/* <APIPostMethods /> */}
       {/* <APIGetMethods /> */}
-      {/* <AllAPIMethods /> */}
       {/* <Hooks /> */}
       {/* <Styles /> */}
       {/* <Bootstrap /> */}
@@ -51,7 +67,6 @@ const App = () => {
       {/* <FwdRef /> */}
       {/* <ControlledComponent /> */}
       {/* <UncontrolledComponents /> */}
-      <Hoc cmp={CounterTwo} />
     </div>
   );
 };
