@@ -1,8 +1,10 @@
 import "./App.css";
-import ControlledComponent from "./Components/ControlledComponent";
-import FwdRef from "./Components/FwdRef";
-import UncontrolledComponents from "./Components/UncontrolledComponents";
-import UseRefExample from "./Components/UseRefExample";
+import CounterTwo from "./Components/CounterTwo";
+import Hoc from "./Components/Hoc";
+// import ControlledComponent from "./Components/ControlledComponent";
+// import FwdRef from "./Components/FwdRef";
+// import UncontrolledComponents from "./Components/UncontrolledComponents";
+// import UseRefExample from "./Components/UseRefExample";
 // import UseMemoExample from "./Components/UseMemoExample";
 // import Bootstrap from "./Components/Bootstrap";
 // import Map from "./Components/Map";
@@ -48,7 +50,8 @@ const App = () => {
       {/* <UseRefExample /> */}
       {/* <FwdRef /> */}
       {/* <ControlledComponent /> */}
-      <UncontrolledComponents />
+      {/* <UncontrolledComponents /> */}
+      <Hoc cmp={CounterTwo} />
     </div>
   );
 };
