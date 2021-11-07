@@ -8,7 +8,7 @@ import Hoc from "./Components/Hoc";
 // import UseRefExample from "./Components/UseRefExample";
 // import UseMemoExample from "./Components/UseMemoExample";
 // import Bootstrap from "./Components/Bootstrap";
-// import Map from "./Components/Map";
+import Map from "./Components/Map";
 // import Styles from "./Components/Styles";
 import Hooks from "./Components/Hooks";
 import APIPostMethods from "./Components/APIPostMethods";
@@ -16,6 +16,11 @@ import APIGetMethods from "./Components/APIGetMethods";
 import AllAPIMethods from "./Components/AllAPIMethods";
 import { Home } from "./Components/Home";
 import PageNotFound from "./Components/PageNotFound";
+import UserList from "./Components/UserList";
+import UserCmp from "./Components/UserCmp";
+import PrevProps from "./Components/PrevProps";
+import StateWithObject from "./Components/StateWithObject";
+import Main from "./ContextAPI/Main";
 // import FuncAsProps from "./Components/FuncAsProps";
 // import BasicFormValidation from "./Components/BasicFormValidation";
 // import ConditionalRendering from "./Components/ConditionalRendering";
@@ -35,16 +40,25 @@ const App = () => {
     <div className='App'>
       <Routes>
         <Route exact={true} path='/' element={<Home />} />
-        <Route exact={true} path='/allapimethods' element={<AllAPIMethods />} />
-        <Route exact={true} path='/apigetmethods' element={<APIGetMethods />} />
+        <Route exact={true} path='/allApiMethods' element={<AllAPIMethods />} />
+        <Route exact={true} path='/apiGetMethod' element={<APIGetMethods />} />
         <Route
           exact={true}
-          path='/apipostmethods'
+          path='/apiPostMethod'
           element={<APIPostMethods />}
         />
         <Route exact={true} path='/hoc' element={<Hoc cmp={CounterTwo} />} />
         <Route exact={true} path='/hooks' element={<Hooks />} />
+        <Route exact={true} path='/dynamicRouting' element={<UserList />} />
         <Route exact={true} path='*' element={<PageNotFound />} />
+        <Route path='/user/:id/:name' exact={true} element={<UserCmp />} />
+        <Route path='/previousProps' exact={true} element={<PrevProps />} />
+        <Route
+          path='/stateWithObject'
+          exact={true}
+          element={<StateWithObject />}
+        />
+        <Route exact={true} path='/contextApi' element={<Main />} />
       </Routes>
 
       {/* <FState /> */}
