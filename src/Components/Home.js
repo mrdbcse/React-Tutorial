@@ -33,6 +33,9 @@ export const Home = () => {
           <li style={{ textAlign: "left" }}>
             <Link to='/contextApi'>Context API</Link>
           </li>
+          <li style={{ textAlign: "left" }}>
+            <Link to='/contextApiWithHooks'>Context API with Hooks</Link>
+          </li>
         </ul>
         <h6>More contents comming soon..........</h6>
       </nav>

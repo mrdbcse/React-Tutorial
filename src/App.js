@@ -1,5 +1,5 @@
 import "./App.css";
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import CounterTwo from "./Components/CounterTwo";
 import Hoc from "./Components/Hoc";
 // import ControlledComponent from "./Components/ControlledComponent";
@@ -8,7 +8,7 @@ import Hoc from "./Components/Hoc";
 // import UseRefExample from "./Components/UseRefExample";
 // import UseMemoExample from "./Components/UseMemoExample";
 // import Bootstrap from "./Components/Bootstrap";
-import Map from "./Components/Map";
+// import Map from "./Components/Map";
 // import Styles from "./Components/Styles";
 import Hooks from "./Components/Hooks";
 import APIPostMethods from "./Components/APIPostMethods";
@@ -21,6 +21,7 @@ import UserCmp from "./Components/UserCmp";
 import PrevProps from "./Components/PrevProps";
 import StateWithObject from "./Components/StateWithObject";
 import Main from "./ContextAPI/Main";
+import Parent from "./ContextAPIwithHooks/Parent";
 // import FuncAsProps from "./Components/FuncAsProps";
 // import BasicFormValidation from "./Components/BasicFormValidation";
 // import ConditionalRendering from "./Components/ConditionalRendering";
@@ -50,15 +51,16 @@ const App = () => {
         <Route exact={true} path='/hoc' element={<Hoc cmp={CounterTwo} />} />
         <Route exact={true} path='/hooks' element={<Hooks />} />
         <Route exact={true} path='/dynamicRouting' element={<UserList />} />
-        <Route exact={true} path='*' element={<PageNotFound />} />
-        <Route path='/user/:id/:name' exact={true} element={<UserCmp />} />
-        <Route path='/previousProps' exact={true} element={<PrevProps />} />
+        <Route exact={true} path='/user/:id/:name' element={<UserCmp />} />
+        <Route exact={true} path='/previousProps' element={<PrevProps />} />
         <Route
-          path='/stateWithObject'
           exact={true}
+          path='/stateWithObject'
           element={<StateWithObject />}
         />
         <Route exact={true} path='/contextApi' element={<Main />} />
+        <Route exact={true} path='//contextApiWithHooks' element={<Parent />} />
+        <Route exact={true} path='*' element={<PageNotFound />} />
       </Routes>
 
       {/* <FState /> */}
